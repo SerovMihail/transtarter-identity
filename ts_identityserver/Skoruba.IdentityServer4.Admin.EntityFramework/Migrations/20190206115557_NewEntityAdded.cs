@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Skoruba.IdentityServer4.Admin.EntityFramework.Data.Migrations
+namespace Skoruba.IdentityServer4.Admin.EntityFramework.Migrations
 {
-    public partial class DbInit : Migration
+    public partial class NewEntityAdded : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -215,11 +215,11 @@ namespace Skoruba.IdentityServer4.Admin.EntityFramework.Data.Migrations
                 name: "ApiSecrets",
                 columns: table => new
                 {
-                    Expiration = table.Column<DateTime>(nullable: true),
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Description = table.Column<string>(maxLength: 1000, nullable: true),
                     Value = table.Column<string>(maxLength: 2000, nullable: true),
+                    Expiration = table.Column<DateTime>(nullable: true),
                     Type = table.Column<string>(maxLength: 250, nullable: true),
                     ApiResourceId = table.Column<int>(nullable: false)
                 },
@@ -400,11 +400,11 @@ namespace Skoruba.IdentityServer4.Admin.EntityFramework.Data.Migrations
                 name: "ClientSecrets",
                 columns: table => new
                 {
-                    Expiration = table.Column<DateTime>(nullable: true),
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Description = table.Column<string>(maxLength: 2000, nullable: true),
                     Value = table.Column<string>(maxLength: 2000, nullable: false),
+                    Expiration = table.Column<DateTime>(nullable: true),
                     Type = table.Column<string>(maxLength: 250, nullable: true),
                     ClientId = table.Column<int>(nullable: false)
                 },

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Skoruba.IdentityServer4.Admin.EntityFramework.DbContexts;
 
-namespace Skoruba.IdentityServer4.Admin.EntityFramework.Data.Migrations
+namespace Skoruba.IdentityServer4.Admin.EntityFramework.Migrations
 {
     [DbContext(typeof(AdminDbContext))]
     partial class AdminDbContextModelSnapshot : ModelSnapshot
@@ -15,7 +15,7 @@ namespace Skoruba.IdentityServer4.Admin.EntityFramework.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.1-rtm-30846")
+                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 

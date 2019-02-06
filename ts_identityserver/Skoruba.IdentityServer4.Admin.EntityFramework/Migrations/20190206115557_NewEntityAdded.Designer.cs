@@ -7,17 +7,17 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Skoruba.IdentityServer4.Admin.EntityFramework.DbContexts;
 
-namespace Skoruba.IdentityServer4.Admin.EntityFramework.Data.Migrations
+namespace Skoruba.IdentityServer4.Admin.EntityFramework.Migrations
 {
     [DbContext(typeof(AdminDbContext))]
-    [Migration("20180810070004_DbInit")]
-    partial class DbInit
+    [Migration("20190206115557_NewEntityAdded")]
+    partial class NewEntityAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.1-rtm-30846")
+                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
