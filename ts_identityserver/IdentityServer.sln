@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{B34ADB50-36BB-478D-A840-23504CF61078}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skoruba.IdentityServer4.Admin", "Skoruba.IdentityServer4.Admin\Skoruba.IdentityServer4.Admin.csproj", "{3545363C-5D67-41D6-80BD-5FFD3420E9A1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skoruba.IdentityServer4.Admin.BusinessLogic", "Skoruba.IdentityServer4.Admin.BusinessLogic\Skoruba.IdentityServer4.Admin.BusinessLogic.csproj", "{51A526F2-9BDD-44A5-9957-3663945AB959}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skoruba.IdentityServer4.Admin.EntityFramework", "Skoruba.IdentityServer4.Admin.EntityFramework\Skoruba.IdentityServer4.Admin.EntityFramework.csproj", "{7CE945BA-A40D-49B2-89E8-3FC40CCC542E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skoruba.IdentityServer4", "Skoruba.IdentityServer4\Skoruba.IdentityServer4.csproj", "{3FDEC5A0-C37A-443B-88AB-2865A41E7DC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B34ADB50-36BB-478D-A840-23504CF61078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B34ADB50-36BB-478D-A840-23504CF61078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B34ADB50-36BB-478D-A840-23504CF61078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B34ADB50-36BB-478D-A840-23504CF61078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3545363C-5D67-41D6-80BD-5FFD3420E9A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3545363C-5D67-41D6-80BD-5FFD3420E9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3545363C-5D67-41D6-80BD-5FFD3420E9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3545363C-5D67-41D6-80BD-5FFD3420E9A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A526F2-9BDD-44A5-9957-3663945AB959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A526F2-9BDD-44A5-9957-3663945AB959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A526F2-9BDD-44A5-9957-3663945AB959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A526F2-9BDD-44A5-9957-3663945AB959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CE945BA-A40D-49B2-89E8-3FC40CCC542E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE945BA-A40D-49B2-89E8-3FC40CCC542E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE945BA-A40D-49B2-89E8-3FC40CCC542E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE945BA-A40D-49B2-89E8-3FC40CCC542E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FDEC5A0-C37A-443B-88AB-2865A41E7DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FDEC5A0-C37A-443B-88AB-2865A41E7DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FDEC5A0-C37A-443B-88AB-2865A41E7DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FDEC5A0-C37A-443B-88AB-2865A41E7DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {691EB797-F625-47A3-A1C2-8AB6106C73ED}
+	EndGlobalSection
+EndGlobal
