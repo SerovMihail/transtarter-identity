@@ -48,7 +48,7 @@ namespace Skoruba.IdentityServer4.Admin
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             app.AddLogging(loggerFactory, Configuration);
-            app.ApplicationServices.GetService<AdminDbContext>().Database.Migrate();
+            //app.ApplicationServices.GetService<AdminDbContext>().Database.Migrate();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
