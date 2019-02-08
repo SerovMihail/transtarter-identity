@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Skoruba.IdentityServer4.Admin.EntityFramework.DbContexts;
 using Skoruba.IdentityServer4.Admin.EntityFramework.Entities.Identity;
+using KL.TS.MessageSender;
 
 namespace IdentityServer
 {
@@ -46,9 +47,9 @@ namespace IdentityServer
                 .AddDefaultTokenProviders();
 
 
+            services.AddScoped<ISender, Sender>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-
 
 
             // configure identity server with in-memory stores, keys, clients and scopes

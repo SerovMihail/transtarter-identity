@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skoruba.IdentityServer4.Adm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skoruba.IdentityServer4", "Skoruba.IdentityServer4\Skoruba.IdentityServer4.csproj", "{3FDEC5A0-C37A-443B-88AB-2865A41E7DC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KL.TS.MessageSender", "KL.TS.MessageSender\KL.TS.MessageSender.csproj", "{B58F0FD7-8A13-4497-81D1-06A8953632AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KL.TS.MQSettings", "KL.TS.MQSettings\KL.TS.MQSettings.csproj", "{5517467E-FC8E-4DE5-BB5E-3CA3945CDC31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{3FDEC5A0-C37A-443B-88AB-2865A41E7DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FDEC5A0-C37A-443B-88AB-2865A41E7DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FDEC5A0-C37A-443B-88AB-2865A41E7DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B58F0FD7-8A13-4497-81D1-06A8953632AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B58F0FD7-8A13-4497-81D1-06A8953632AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B58F0FD7-8A13-4497-81D1-06A8953632AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B58F0FD7-8A13-4497-81D1-06A8953632AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5517467E-FC8E-4DE5-BB5E-3CA3945CDC31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5517467E-FC8E-4DE5-BB5E-3CA3945CDC31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5517467E-FC8E-4DE5-BB5E-3CA3945CDC31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5517467E-FC8E-4DE5-BB5E-3CA3945CDC31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

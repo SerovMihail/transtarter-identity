@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using IdentityServer.Controllers.Account;
+//using KL.TS.MessageSender;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -17,24 +18,32 @@ namespace IdentityServer.Controllers.api
     {
         private readonly UserManager<UserIdentity> _userManager;
         private readonly SignInManager<UserIdentity> _signInManager;
+        //private readonly Sender _sender;
 
         public AccountController(
             UserManager<UserIdentity> userManager,
-            SignInManager<UserIdentity> signInManager)
+            SignInManager<UserIdentity> signInManager //,
+            //Sender sender
+            )
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            //_sender = sender;
         }
 
         [HttpPost("register")]
         [AllowAnonymous]
         //[ValidateAntiForgeryToken]
-        public async Task<bool> Register([FromBody] RegisterViewModel model)
+        public async Task<IActionResult> Register([FromBody] RegisterInputModel model)
         {
 
             var user = new UserIdentity
             {
-                UserName = model.Login
+                UserName = model.Login,
+                PhoneNumber = model.Phone,
+                OrganizationName = model.OrganizationName,
+                OrganizationType = model.OrganizationType,
+                OrganizationVariant = model.OrganizationVariant
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);
@@ -50,13 +59,13 @@ namespace IdentityServer.Controllers.api
                 //_logger.LogInformation(3, "User created a new account with password.");
                 //return RedirectToLocal(returnUrl);
 
-                return true;
+                return Ok();
             }
             //AddErrors(result);
 
 
             // If we got this far, something failed, redisplay form
-            return false;
+            return BadRequest(result.Errors.First());
         }
     }
 }
