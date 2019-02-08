@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using IdentityServer.Controllers.Account;
-//using KL.TS.MessageSender;
+using KL.TS.MessageSender;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -18,17 +18,17 @@ namespace IdentityServer.Controllers.api
     {
         private readonly UserManager<UserIdentity> _userManager;
         private readonly SignInManager<UserIdentity> _signInManager;
-        //private readonly Sender _sender;
+        private readonly Sender _sender;
 
         public AccountController(
             UserManager<UserIdentity> userManager,
-            SignInManager<UserIdentity> signInManager //,
-            //Sender sender
+            SignInManager<UserIdentity> signInManager,
+            Sender sender
             )
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            //_sender = sender;
+            _sender = sender;
         }
 
         [HttpPost("register")]
@@ -49,6 +49,7 @@ namespace IdentityServer.Controllers.api
             var result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
+                _sender.Send(new CreateUserCommand(user));
                 // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=532713
                 // Send an email with this link
                 //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
